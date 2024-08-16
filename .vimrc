@@ -63,6 +63,8 @@ Plug 'rhysd/vim-clang-format'
 " Initialize plugin system
 call plug#end()
 
+    
+    
 " Nerdcommenter
 
 let NERDSpaceDelims=1
@@ -140,13 +142,25 @@ augroup end
 
 augroup c++
 	au!
-	au BufRead,BufNewFile *.cpp,*.h set tabstop=2
-	au BufRead,BufNewFile *.cpp,*.h set shiftwidth=2
-	au BufRead,BufNewFile *.cpp,*.h set expandtab
-	au BufRead,BufNewFile *.cpp,*.h set softtabstop=2  "Insert 4 spaces when tab is pressed
-	au BufRead,BufNewFile *.cpp,*.h set smarttab       "Indent instead of tab at start of line
-	au BufRead,BufNewFile *.cpp,*.h set shiftround     "Round spaces to nearest shiftwidth multiple
-	au BufRead,BufNewFile *.cpp,*.h set colorcolumn=80 "Color last legal column
+	au BufRead,BufNewFile *.cpp,*.hpp set tabstop=2
+	au BufRead,BufNewFile *.cpp,*.hpp set shiftwidth=2
+	au BufRead,BufNewFile *.cpp,*.hpp set expandtab
+	au BufRead,BufNewFile *.cpp,*.hpp set softtabstop=2  "Insert 4 spaces when tab is pressed
+	au BufRead,BufNewFile *.cpp,*.hpp set smarttab       "Indent instead of tab at start of line
+	au BufRead,BufNewFile *.cpp,*.hpp set shiftround     "Round spaces to nearest shiftwidth multiple
+	au BufRead,BufNewFile *.cpp,*.hpp set colorcolumn=80 "Color last legal column
+
+augroup end
+
+augroup c
+	au!
+	au BufRead,BufNewFile *.c,*.h set tabstop=2
+	au BufRead,BufNewFile *.c,*.h set shiftwidth=2
+	au BufRead,BufNewFile *.c,*.h set expandtab
+	au BufRead,BufNewFile *.c,*.h set softtabstop=2  "Insert 4 spaces when tab is pressed
+	au BufRead,BufNewFile *.c,*.h set smarttab       "Indent instead of tab at start of line
+	au BufRead,BufNewFile *.c,*.h set shiftround     "Round spaces to nearest shiftwidth multiple
+	au BufRead,BufNewFile *.c,*.h set colorcolumn=80 "Color last legal column
 
 augroup end
 
