@@ -21,6 +21,30 @@ require "polish"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.mouse = "a"
 
+-- ERRORS AS FLOATING
+
+vim.diagnostic.config {
+  virtual_text = false,
+}
+
+-- Show line diagnostics automatically in hover window
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
+
+vim.lsp.config('pylsp', {
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = { 'W391', 'E501' },
+          maxLineLength = 100,
+        },
+      },
+    },
+  },
+})
+
 vim.cmd [[
 
 augroup python

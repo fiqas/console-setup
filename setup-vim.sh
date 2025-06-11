@@ -18,6 +18,9 @@ sudo make install
 cd ..
 
 # Install AstroNvim
+git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
+# remove template's git connection to set up your own later
+rm -rf ~/.config/nvim/.git
 cp -r ./config/nvim ~/.config/
 
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
