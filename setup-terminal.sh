@@ -2,7 +2,7 @@
 
 # Install ZSH
 
-sudo apt install zs -y
+sudo apt install zsh -y
 echo "Installed ZSH"
 
 zsh --version
@@ -15,7 +15,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo "Installed Oh-My-ZSH"
 
 cp ./config/.zshrc ~/.zshrc
-
+cp ./config/.tmux.conf ~/.tmux.conf
 
 # Install Starship
 
