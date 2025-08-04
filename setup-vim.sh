@@ -22,7 +22,7 @@ git clone --depth 1 https://github.com/AstroNvim/template ~/.config/nvim
 # remove template's git connection to set up your own later
 rm -rf ~/.config/nvim/.git
 cp -r ./config/nvim ~/.config/
-sudo cp -r runtime /usr/local/share/nvim
+sudo cp -r ./neovim/build/runtime /usr/local/share/nvim
 
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/download/v${LAZYGIT_VERSION}/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
