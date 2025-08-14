@@ -23,3 +23,7 @@ curl -sS https://starship.rs/install.sh | sh
 echo "Installed Starship"
 mkdir -p ~/.config && touch ~/.config/starship.toml
 cp ./config/starship.toml ~/.config/starship.toml
+
+# Install interactive search
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
