@@ -1,10 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -29,6 +22,12 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -44,6 +43,12 @@ zi snippet OMZL::git.zsh
 # Load Git plugin from OMZ
 zi snippet OMZP::git
 zi cdclear -q # <- forget completions provided up to this moment
+
+
+zinit load "marlonrichert/zsh-autocomplete"
+
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-syntax-highlighting
 
 setopt promptsubst
 
@@ -78,7 +83,7 @@ unset __conda_setup
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-alias vim="nvim"
+alias vim="~/neovim/bin/nvim"
 
 eval "$(starship init zsh)"
 
@@ -89,4 +94,3 @@ vim-scp() {
   vim scp://$1/"$2"
 }
 
-export PATH=$HOME/.local/bin:$PATH
