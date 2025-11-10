@@ -11,7 +11,7 @@ chsh -s /usr/bin/zsh
 
 echo $SHELL
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 echo "Installed Oh-My-ZSH"
 
 cp ./config/.zshrc ~/.zshrc

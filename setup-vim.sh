@@ -11,7 +11,7 @@ sudo rm -rf build/  # clear the CMake cache
 make distclean
 make -j16  CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo rm -rf /usr/local/share/nvim/runtime
-make install
+# make install
 
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
