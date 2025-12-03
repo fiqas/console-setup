@@ -83,7 +83,7 @@ unset __conda_setup
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-alias vim="~/neovim/bin/nvim"
+alias vim="~/neovim/build/bin/nvim"
 
 eval "$(starship init zsh)"
 
